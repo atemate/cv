@@ -111,7 +111,7 @@ cv:
       - Static code analysis, security vulnerability research, distributed systems
         thesis
     projects:
-    - name: Asya🎭 - Kubernetes-native Actor Mesh for AI Orchestration'
+    - name: Asya🎭 - Kubernetes-native Actor Mesh for AI Orchestration
       date: 2025-11
       highlights:
       - Actor-based framework for building async, decentralized AI systems on Kubernetes
@@ -195,6 +195,16 @@ cv:
     - bullet: Google Cloud Professional ML Engineer (2023)
 
 design:
-  theme: opal
+  theme: engineeringresumes
   page:
     size: a4
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.5in
+    right_margin: 0.5in
+  colors:
+    section_titles: "#1a5276"
+    links: "#1a5276"
+  typography:
+    font_size:
+      body: 10pt
