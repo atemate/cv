@@ -74,9 +74,9 @@ cv:
       - Built end-to-end CI/CD for ML models integrating GitHub Actions with Vertex AI
         Pipelines and Cloud Build - enabling rapid model iteration while maintaining
         MLOps best practices (dataset versioning, model registry, automated evaluation)
-      - Designed dataset versioning approach enabling model comparability across dataset
-        evolution, which later identified as a cross-team problem and proposed as a
-        platform-level standard
+      - Engineered a dataset versioning approach to ensure strict model comparability;
+        later recognized this as a systemic bottleneck and successfully pitched it as
+        a platform-wide standard
       - On-call SRE duties, monitoring and observability (DataDog, OpsGenie)
       - 'Co-authored with Google: "[How Delivery Hero connected GitHub with Vertex AI
         to manage 20+ voucher fraud detection models](https://cloud.google.com/blog/products/ai-machine-learning/delivery-hero-takes-on-voucher-fraud-with-google-cloud-ai)" (Google Cloud Blog, Nov 2023)'
@@ -123,8 +123,7 @@ cv:
         dead-letter queues - defined as deployment config, not code'
       - KEDA-based independent per-actor autoscaling including scale-to-zero
       - Presented at KubeCon + CloudNativeCon EU 2026
-      - 'Website: https://asya.sh'
-      - 'GitHub: https://github.com/deliveryhero/asya'
+      - '[asya.sh](https://asya.sh) | [GitHub](https://github.com/deliveryhero/asya)'
     - name: git-aint - AI-native Issue Tracker
       date: '2026-03'
       highlights:
@@ -137,7 +136,7 @@ cv:
         owned by the team, not hidden in a third-party tool
       - Together with git worktrees, allows parallelizing implementation across tens
         of agents without losing control on the code
-      - 'GitHub: https://github.com/atemate/git-aint'
+      - '[GitHub](https://github.com/atemate/git-aint)'
     Public Speaking:
     - bullet: '"REST in Peace: AI Needs to Be Async" - KubeCon + CloudNativeCon EU 2026 (~13k attendees)'
     - bullet: AI Infrastructure Summit Europe 2026, Munich - we.CONECT (500+ attendees)
