@@ -5,7 +5,6 @@ cv:
     (K8s, GCP, AWS)
   location: Berlin, Germany
   email: atemate@duck.com
-  # phone: REDACTED
   social_networks:
   - network: LinkedIn
     username: atemate
@@ -23,7 +22,7 @@ cv:
     - bullet: Built self-hosted AI image processing platform on AWS/Kubernetes processing
         millions of images at near-realtime throughput - AWS EKS, self-hosted Stable Diffusion models,
         GPU auto-scaling (KEDA), linear horizontal autoscaling
-    - bullet: Created asya.sh🎭 - Open-source Kubernetes-native actor mesh for async
+    - bullet: Created [asya.sh🎭](https://asya.sh) - Open-source Kubernetes-native actor mesh for async
         AI orchestration - Apache 2.0; designed as foundation for AI ops platforms
     - bullet: 'Driving company-wide initiatives: self-hosted AI adoption, GPU cost
         reduction, cross-team dataset versioning standard'
@@ -48,7 +47,7 @@ cv:
         (cache hit); pod startup 7 min → 3 min; image sizes 3–4× smaller [Docker Buildx,
         uv, optimized layer caching]
       - Actor mesh architecture proved highly effective for generic AI use-cases beyond
-        image processing; open-sourced as asya.sh🎭; driving internal adoption across
+        image processing; open-sourced as [asya.sh🎭](https://asya.sh); driving internal adoption across
         teams with growing interest from the external community
       - Authored company-wide RFC on GPU capacity and cost strategy (training + serving)
         covering 18-36 month demand forecasting, usage patterns across teams, and

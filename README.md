@@ -1,6 +1,6 @@
-# Resume
+# CV
 
-Resume of Artem Yushkovskiy -- AI Platform Engineer & Tech Lead.
+CV of Artem Yushkovskiy -- AI Platform Engineer & Tech Lead.
 
 Built with [RenderCV](https://rendercv.com/) from a single YAML source file.
 
