@@ -165,14 +165,15 @@ cv:
       - Information Security, with honors.
     skills:
     - label: AI Systems & Inference
-      details: self-hosted model serving, GPU orchestration (KEDA, scale-to-zero),
+      details: self-hosted model serving, inference optimization, GPU orchestration
+        (KEDA, scale-to-zero), batch & streaming inference, model deployment,
         async actor-based pipelines, AI guardrails, image generation (SDXL),
         LLM integration, vLLM, Triton, PyTorch, HuggingFace, ONNX
     - label: Platform Engineering
       details: Kubernetes (CRDs, operators, Helm, Kustomize), GitOps (ArgoCD, Flux),
-        Terraform, CI/CD (GitHub Actions, Drone CI, Docker Buildx, Kaniko),
-        observability (OpenTelemetry, Prometheus, Loki, Grafana, DataDog),
-        alerting (OpsGenie), secret management (Vault)
+        IaC (Terraform), CI/CD (GitHub Actions, Drone CI, Docker Buildx, Kaniko),
+        multi-tenancy, RBAC, observability (OpenTelemetry, Prometheus, Loki,
+        Grafana, DataDog), alerting (OpsGenie), secret management (Vault)
     - label: MLOps & Data
       details: ML lifecycle (Vertex AI, MLflow, W&B), pipeline orchestration
         (Airflow, KFP, Flyte, Metaflow), feature stores, dataset versioning (DVC),
@@ -185,7 +186,8 @@ cv:
         RabbitMQ, NATS, MongoDB
     - label: Agentic Engineering
       details: multi-agent parallel development, agent orchestration (A2A, MCP,
-        LangGraph, CrewAI), human-in-the-loop workflows, Langfuse, beads,
+        LangGraph, CrewAI), tool use, prompt engineering, eval pipelines,
+        human-in-the-loop workflows, Langfuse, beads,
         large-scale codebase automation (Claude Code, git-aint)
     languages:
     - label: Fluent
