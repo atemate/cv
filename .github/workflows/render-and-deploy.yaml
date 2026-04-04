@@ -29,8 +29,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add out/Artem_Yushkovskiy_CV.pdf
-          git diff --cached --quiet || git commit -m "chore: update rendered PDF" && git push
+          git add -f out/Artem_Yushkovskiy_CV.pdf
+          git diff --cached --quiet || (git commit -m "chore: update rendered PDF" && git push)
 
       - name: Prepare Pages site
         run: |
