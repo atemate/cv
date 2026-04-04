@@ -31,6 +31,8 @@ jobs:
           cp out/Artem_Yushkovskiy_CV.pdf _site/
           cp out/Artem_Yushkovskiy_CV.html _site/index.html
           cp out/Artem_Yushkovskiy_CV_*.png _site/ 2>/dev/null || true
+          cp style.css _site/
+          sed -i 's|</style>|</style>\n    <link rel="stylesheet" href="style.css">|' _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
