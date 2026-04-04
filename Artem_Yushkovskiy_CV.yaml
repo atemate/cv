@@ -195,8 +195,6 @@ cv:
     - bullet: Google Cloud Professional ML Engineer (2023)
 
 design:
-  theme: engineeringresumes
-  # theme: harvard
-  # theme: classic
+  theme: opal
   page:
     size: a4

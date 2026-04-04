@@ -1,0 +1,19 @@
+design:
+  theme: opal
+  page:
+    size: a4
+    top_margin: 0.5in
+    bottom_margin: 0.5in
+    left_margin: 0.5in
+    right_margin: 0.5in
+  colors:
+    name: "#1a5276"
+    headline: "#1e6091"
+    connections: "#1e6091"
+    section_titles: "#1a5276"
+    links: "#1a5276"
+    footer: "#5b8fa8"
+    top_note: "#5b8fa8"
+  typography:
+    font_size:
+      body: 10pt
