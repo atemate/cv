@@ -1,5 +1,7 @@
 # RenderCV output (regenerated from YAML)
 out/
+# But track PDFs for direct GitHub links
+!out/*.pdf
 
 # Python
 __pycache__/
