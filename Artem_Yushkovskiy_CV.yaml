@@ -1,0 +1,203 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Artem Yushkovskiy
+  headline: AI Platform Engineer & Tech Lead  •  Distributed AI Orchestration  •  Cloud-native
+    (K8s, GCP, AWS)
+  location: Berlin, Germany
+  email: atemate@duck.com
+  # phone: REDACTED
+  social_networks:
+  - network: LinkedIn
+    username: atemate
+  - network: GitHub
+    username: atemate
+  sections:
+    summary:
+    - 'AI Platform Engineer and Tech Lead with 10+ years in software engineering.
+      Speaker at KubeCon EU 2026 and creator of an open-source actor mesh for
+      orchestrating AI workloads on Kubernetes. Operating at the intersection of
+      data science, backend engineering, DevOps, and MLOps - building modular,
+      production-grade platforms grounded in stateless execution, durable workflows,
+      and linear scalability.'
+    highlights:
+    - bullet: Built self-hosted AI image processing platform on AWS/Kubernetes processing
+        millions of images at near-realtime throughput - AWS EKS, self-hosted Stable Diffusion models,
+        GPU auto-scaling (KEDA), linear horizontal autoscaling
+    - bullet: Created asya.sh🎭 - Open-source Kubernetes-native actor mesh for async
+        AI orchestration - Apache 2.0; designed as foundation for AI ops platforms
+    - bullet: 'Driving company-wide initiatives: self-hosted AI adoption, GPU cost
+        reduction, cross-team dataset versioning standard'
+    - bullet: Advanced agentic software engineering - coordinating tens of parallel
+        AI agents across large production codebases; author of git-aint;
+        actively transferring expertise across teams
+    - bullet: 'Google Cloud Certified: Professional Architect (2025) + Professional ML Engineer (2023)'
+    experience:
+    - company: Delivery Hero
+      position: Senior AI Engineer - Distributed AI Orchestration, GenAI
+      location: Berlin, DE
+      start_date: 2023-08
+      end_date: present
+      highlights:
+      - Designed and scaled a self-hosted AI image processing platform on AWS/Kubernetes
+        (outpainting, upscaling, watermark/object removal), which evolved from batch ML
+        pipelines to a dedicated GPU cluster to an actor-based async inference architecture;
+        processing millions of images at near-realtime throughput; working closely
+        with DS on model experimentation, transparency, and testability
+      - Designed CI/CD for monorepo with 20+ model packages building multi-GB GPU images enabling
+        O(1) effort when onboarding new models; single parameterized Dockerfile; build time 4h → 20 min (cache miss), 1h → 6 min
+        (cache hit); pod startup 7 min → 3 min; image sizes 3–4× smaller [Docker Buildx,
+        uv, optimized layer caching]
+      - Actor mesh architecture proved highly effective for generic AI use-cases beyond
+        image processing; open-sourced as asya.sh🎭; driving internal adoption across
+        teams with growing interest from the external community
+      - Authored company-wide RFC on GPU capacity and cost strategy (training + serving)
+        covering 18-36 month demand forecasting, usage patterns across teams, and
+        negotiation baseline for cloud provider agreements; designed cross-team dataset
+        versioning standard enabling model comparability across dataset evolution
+      - Mentoring junior engineers on clean code and architecture design; coaching data
+        scientists on software engineering best practices to raise code quality and
+        testability across the team
+      - 'Stack: *Python asyncio*, *Go*, *Kubernetes* (CRDs, Helm, Kustomize), *KEDA*,
+        *ArgoCD*, *FluxCD*, *Drone CI*, *GitHub Actions*, *OpenTelemetry*, *Grafana*,
+        *Terraform*, *AWS*'
+    - company: Delivery Hero
+      position: ML Engineer - Incentive Fraud Detection
+      location: Berlin, DE
+      start_date: 2022-06
+      end_date: 2023-08
+      highlights:
+      - 'Owned full lifecycle of 20+ low-latency production ML models for voucher fraud
+        detection across 70+ countries: Vertex AI training pipelines, batch inference,
+        feature stores (BigQuery, Airflow, DynamoDB), and serving optimized to <10ms
+        latency on every food order request - enabling realtime blocking of incentive
+        fraud at scale, saving hundreds of thousands monthly'
+      - Built end-to-end CI/CD for ML models integrating GitHub Actions with Vertex AI
+        Pipelines and Cloud Build - enabling rapid model iteration while maintaining
+        MLOps best practices (dataset versioning, model registry, automated evaluation)
+      - Designed dataset versioning approach enabling model comparability across dataset
+        evolution, which later identified as a cross-team problem and proposed as a
+        platform-level standard
+      - On-call SRE duties, monitoring and observability (DataDog, OpsGenie)
+      - 'Co-authored with Google: "[How Delivery Hero connected GitHub with Vertex AI
+        to manage 20+ voucher fraud detection models](https://cloud.google.com/blog/products/ai-machine-learning/delivery-hero-takes-on-voucher-fraud-with-google-cloud-ai)" (Google Cloud Blog, Nov 2023)'
+      - 'Stack: *GCP Vertex AI*, *BigQuery*, *Airflow*, *DynamoDB*, *Terraform*,
+        *AWS EKS*, *GitHub Actions*, *FastAPI*, *DataDog*'
+    - company: Delivery Hero
+      position: ML Engineer - ML Platform
+      location: Berlin, DE
+      start_date: 2021-11
+      end_date: 2022-06
+      highlights:
+      - Designed and built an internal ML Platform on GCP Vertex AI - providing shared
+        data and ML pipeline infrastructure across teams (CLV, dish normalisation,
+        email suspicion, fraud detection)
+      - Enabled consistent model training, evaluation, and deployment workflows across
+        multiple AI use-cases and teams
+    - company: Neuromation / Neu.ro
+      position: Software Engineer → MLOps Engineer
+      location: St Petersburg, RU
+      start_date: '2018'
+      end_date: '2021'
+      highlights:
+      - 'Built core of a Kubernetes-based ML platform ("Docker-like experience on
+        any cloud and bare metal"): microservices, CLI/SDK, resource orchestration;
+        later formed and joined MLOps tooling team - full ML lifecycle, client support,
+        Kubernetes internals (Prometheus, Grafana, DVC, Seldon, Feast)'
+    - company: Positive Technologies + Aalto University
+      position: Early career
+      start_date: '2015'
+      end_date: '2018'
+      highlights:
+      - Static code analysis, security vulnerability research, distributed systems
+        thesis
+    projects:
+    - name: Asya🎭 - Kubernetes-native Actor Mesh for AI Orchestration'
+      date: 2025-11
+      highlights:
+      - Actor-based framework for building async, decentralized AI systems on Kubernetes
+      - 'Pure Python handlers + CRD-driven infrastructure: clean separation of business
+        logic and platform configuration'
+      - Supports A2A protocols, dynamic routing, streaming, and human-in-the-loop
+        flows
+      - 'Built-in resilience via actor flavors (CRD overlays): retry policies, timeouts,
+        dead-letter queues - defined as deployment config, not code'
+      - KEDA-based independent per-actor autoscaling including scale-to-zero
+      - Presented at KubeCon + CloudNativeCon EU 2026
+      - 'Website: https://asya.sh'
+      - 'GitHub: https://github.com/deliveryhero/asya'
+    - name: git-aint - AI-native Issue Tracker
+      date: '2026-03'
+      highlights:
+      - Issue tracking where tasks are markdown files stored in git (separate worktree)
+        - no external database, no SaaS dependency
+      - 'Designed for parallel multi-agent development workflows while keeping human
+        in the loop: AI agents read and write tasks natively alongside humans, all
+        stored in plain text in git'
+      - Enables RFC, ADR, tech design, and task tracking as editable .md files - complexity
+        owned by the team, not hidden in a third-party tool
+      - Together with git worktrees, allows parallelizing implementation across tens
+        of agents without losing control on the code
+      - 'GitHub: https://github.com/atemate/git-aint'
+    Public Speaking:
+    - bullet: '"REST in Peace: AI Needs to Be Async" - KubeCon + CloudNativeCon EU 2026 (~13k attendees)'
+    - bullet: AI Infrastructure Summit Europe 2026, Munich - we.CONECT (500+ attendees)
+    - bullet: '"Fast & Asynchronous: Drift Your AI, Not Your GPU Bill" - AI in Production Meetup, Berlin (150+ participants, GetYourGuide, Nov 2025)'
+    - bullet: '"Fast & Asynchronous: Drift Your AI, Not Your GPU Bill" - Agents in Production virtual event (~4k participants, MLOps Community x Prosus, Dec 2025)'
+    - bullet: organized regular meetups for MLOps Community Berlin; was leading Ask-Me-Anything initiative in MLOps Community Slack (2021-2023)
+    education:
+    - institution: Aalto University (Helsinki, FI) & ITMO University (St Petersburg,
+        RU)
+      area: Computer Science
+      degree: MSc
+      start_date: '2016'
+      end_date: '2018'
+      highlights:
+      - 'Double-degree programme: Information Security and Cloud Computing, with honors. Thesis:
+        Automated Analysis of Weak Memory Models.'
+    - institution: ITMO University (St Petersburg, RU)
+      area: Computer Science
+      degree: BSc
+      start_date: '2012'
+      end_date: '2016'
+      highlights:
+      - Information Security, with honors.
+    skills:
+    - label: AI Systems & Inference
+      details: self-hosted model serving, GPU orchestration (KEDA, scale-to-zero),
+        async actor-based pipelines, AI guardrails, image generation (SDXL),
+        LLM integration, vLLM, Triton, PyTorch, HuggingFace, ONNX
+    - label: Platform Engineering
+      details: Kubernetes (CRDs, operators, Helm, Kustomize), GitOps (ArgoCD, Flux),
+        Terraform, CI/CD (GitHub Actions, Drone CI, Docker Buildx, Kaniko),
+        observability (OpenTelemetry, Prometheus, Loki, Grafana, DataDog),
+        alerting (OpsGenie), secret management (Vault)
+    - label: MLOps & Data
+      details: ML lifecycle (Vertex AI, MLflow, W&B), pipeline orchestration
+        (Airflow, KFP, Flyte, Metaflow), feature stores, dataset versioning (DVC),
+        data quality (Great Expectations, Evidently), stream processing (Flink),
+        low-latency model serving (<10ms)
+    - label: Languages & Infrastructure
+      details: Python (asyncio, FastAPI, uv), Go, Bash, Linux,
+        AWS (EKS, SQS, SNS, Lambda, ECR), GCP (Vertex AI, Pub/Sub, Cloud Run,
+        Cloud Build, GCS, Artifact Registry), PostgreSQL, DynamoDB, Redis,
+        RabbitMQ, NATS, MongoDB
+    - label: Agentic Engineering
+      details: multi-agent parallel development, agentic frameworks (A2A, MCP,
+        LangGraph, CrewAI), Langfuse, Langwatch, Scenarios, Claude Code, beads, git-aint
+    languages:
+    - label: Fluent
+      details: English, Russian
+    - label: Intermediate
+      details: French
+    - label: Basic
+      details: German
+    certifications:
+    - bullet: Google Cloud Professional Architect (2025)
+    - bullet: Google Cloud Professional ML Engineer (2023)
+
+design:
+  theme: engineeringresumes
+  # theme: harvard
+  # theme: classic
+  page:
+    size: a4
