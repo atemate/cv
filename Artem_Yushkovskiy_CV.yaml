@@ -14,15 +14,15 @@ cv:
     summary:
     - 'AI Platform Engineer and Tech Lead with 10+ years in software engineering.
       Speaker at KubeCon EU 2026 and creator of an open-source actor mesh for
-      orchestrating AI workloads on Kubernetes. Operating at the intersection of
-      data science, backend engineering, DevOps, and MLOps - building modular,
-      production-grade platforms grounded in stateless execution, durable workflows,
-      and linear scalability.'
+      orchestrating AI workloads on Kubernetes. Evolved request-response AI pipelines
+      into async, message-driven, stateless execution. Operating at the
+      intersection of data science, backend engineering, DevOps, and MLOps - building
+      modular, production-grade platforms with durable workflows and linear scalability.'
     highlights:
     - bullet: Built self-hosted AI image processing platform on AWS/Kubernetes processing
         millions of images at near-realtime throughput - AWS EKS, self-hosted Stable Diffusion models,
         GPU auto-scaling (KEDA), linear horizontal autoscaling
-    - bullet: Created [asya.sh🎭](https://asya.sh) - Open-source Kubernetes-native actor mesh for async
+    - bullet: Creator of [asya.sh🎭](https://asya.sh) - open-source Kubernetes-native actor mesh for async
         AI orchestration - Apache 2.0; designed as foundation for AI ops platforms
     - bullet: 'Driving company-wide initiatives: self-hosted AI adoption, GPU cost
         reduction, cross-team dataset versioning standard'
@@ -37,11 +37,13 @@ cv:
       start_date: 2023-08
       end_date: present
       highlights:
+      - Led transition from request-response ML pipelines to async, actor-based
+        orchestration — enabling independent scaling, failure isolation, and
+        message-driven execution across AI workloads
       - Designed and scaled a self-hosted AI image processing platform on AWS/Kubernetes
-        (outpainting, upscaling, watermark/object removal), which evolved from batch ML
-        pipelines to a dedicated GPU cluster to an actor-based async inference architecture;
-        processing millions of images at near-realtime throughput; working closely
-        with DS on model experimentation, transparency, and testability
+        (outpainting, upscaling, watermark/object removal); processing millions of
+        images at near-realtime throughput; enabling rapid model experimentation,
+        transparency, and testability
       - Designed CI/CD for monorepo with 20+ model packages building multi-GB GPU images enabling
         O(1) effort when onboarding new models; single parameterized Dockerfile; build time 4h → 20 min (cache miss), 1h → 6 min
         (cache hit); pod startup 7 min → 3 min; image sizes 3–4× smaller [Docker Buildx,
@@ -120,6 +122,8 @@ cv:
         flows
       - 'Built-in resilience via actor flavors (CRD overlays): retry policies, timeouts,
         dead-letter queues - defined as deployment config, not code'
+      - 'Dynamic routing where "the message knows the way" — stateless actors,
+        externalized state, no shared pipeline bottlenecks'
       - KEDA-based independent per-actor autoscaling including scale-to-zero
       - Presented at KubeCon + CloudNativeCon EU 2026
       - '[asya.sh](https://asya.sh) | [GitHub](https://github.com/deliveryhero/asya)'
@@ -180,8 +184,9 @@ cv:
         Cloud Build, GCS, Artifact Registry), PostgreSQL, DynamoDB, Redis,
         RabbitMQ, NATS, MongoDB
     - label: Agentic Engineering
-      details: multi-agent parallel development, agentic frameworks (A2A, MCP,
-        LangGraph, CrewAI), Langfuse, Langwatch, Scenarios, Claude Code, beads, git-aint
+      details: multi-agent parallel development, agent orchestration (A2A, MCP,
+        LangGraph, CrewAI), human-in-the-loop workflows, Langfuse, beads,
+        large-scale codebase automation (Claude Code, git-aint)
     languages:
     - label: Fluent
       details: English, Russian
