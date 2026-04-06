@@ -248,7 +248,9 @@ cv:
     - label: Spoken Languages
       details: 'English, Russian (fluent); French (intermediate); German (learning)'
     - label: Certifications
-      details: GCP Professional Architect (2025), GCP Professional ML Engineer (2023)
+      details: '[GCP Professional Architect](https://www.credly.com/badges/e6e0043b-1713-4a1a-92b2-ed7fe2a312bb/) (2025),
+        [GCP Professional ML Engineer](https://www.credly.com/badges/e8299f25-ee02-47cf-b70f-c392f2926ef8/) (2023, expired),
+        [KubeCon + CloudNativeCon Speaker](https://www.credly.com/badges/f142bfaa-2160-4e15-8dfa-170405b7719b/) (2026)'
 
 design:
   theme: engineeringresumes
