@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
 cv:
   name: Artem Yushkovskiy
-  headline: AI Platform Engineer & Tech Lead  •  Distributed AI Orchestration  •  Cloud-native
+  headline: AI Systems Engineer & Tech Lead  •  Agentic AI & Distributed Systems  •  Cloud-native
     (K8s, GCP, AWS)
   location: Berlin, Germany
   email: atemate@duck.com
@@ -12,22 +12,22 @@ cv:
     username: atemate
   sections:
     summary:
-    - '**AI Platform Engineer & Tech Lead**, 8+ years building ML platforms and high-scale
-      distributed AI systems (10+ in software engineering); tech lead of a 10-person squad
-      (no direct reports) owning architecture, mentoring, and delivery.'
-    - 'Built AI infrastructure at global scale: **self-hosted GenAI image enhancement**
-      (100K+ images/night, batch → near-realtime streaming), **per-country voucher-fraud
-      models** across 20+ countries (<10ms serving, 70% fraud reduction), and an
-      **internal ML platform** on GCP Vertex AI used by 5+ teams.'
+    - '**AI Systems Engineer & Tech Lead**, 8+ years building distributed AI platforms and
+      agentic infrastructure (10+ in software engineering); tech lead of a 10-person
+      squad (no direct reports) owning architecture, mentoring, and delivery.'
     - 'Creator of **[asya.sh](https://asya.sh)**, an open-source Kubernetes-native actor
-      mesh for AI, presented at **KubeCon EU 2026**. Berlin-based, authorized to work in
-      Germany (no visa sponsorship needed) — seeking hybrid or fully remote full-time
-      roles (permanent employment, not freelance).'
+      mesh for AI/agentic workloads, presented at **KubeCon EU 2026**; applied it in
+      production for **self-hosted GenAI image pipelines** (100K+ images/night),
+      **per-country fraud-detection models** across 20+ countries (<10ms, 70% fraud
+      reduction), and an **internal ML platform** on GCP Vertex AI used by 5+ teams.'
+    - 'Berlin-based, authorized to work in Germany (no visa sponsorship needed) — seeking
+      hybrid or fully remote full-time roles in **agentic AI / distributed platform
+      engineering** (permanent employment, not freelance).'
     experience:
     - company: Delivery Hero
       position: Sr AI Engineer - Distributed AI Orchestration, GenAI (images)
       location: Berlin, DE
-      start_date: 2023-08
+      start_date: 2024-02
       end_date: present
       highlights:
       - 'Owned architecture decisions for a 10-person squad (5 engineers, 5 data
@@ -67,10 +67,10 @@ cv:
         CI/CD, clean code) to raise tech culture across the team; active contributor
         to ML chapter and weekly operations reviews, driving cross-team knowledge sharing
     - company: Delivery Hero
-      position: ML Engineer, ML Platform → Fraud Detection
+      position: ML Engineer, ML Platform → Fraud Detection → GenAI
       location: Berlin, DE
       start_date: 2021-11
-      end_date: 2023-08
+      end_date: 2024-02
       highlights:
       - Designed and built an internal ML Platform on GCP Vertex AI, providing shared
         data and ML pipeline infrastructure across teams (CLV, food ontology,
@@ -91,6 +91,9 @@ cv:
         OpsGenie)
       - 'Co-authored with Google: "[How Delivery Hero connected GitHub with Vertex AI
         to manage 20+ voucher fraud detection models](https://cloud.google.com/blog/products/ai-machine-learning/delivery-hero-takes-on-voucher-fraud-with-google-cloud-ai)" (Google Cloud Blog, Nov 2023)'
+      - 'Transitioned into GenAI: built and maintained early image-generation pipelines
+        (GCP Vertex AI, Pub/Sub, Cloud Run, OpenAI, Imagen), laying the groundwork for
+        the self-hosted platform built in the following role'
     - company: Neuromation / Neu.ro
       position: Software Engineer → MLOps Engineer
       location: St Petersburg, RU
@@ -164,7 +167,7 @@ cv:
         vector search (Redis), stream processing (Flink),
         low-latency model serving (<10ms)
     - label: Programming & Cloud Infrastructure
-      details: Python (asyncio, FastAPI, uv), Go, Bash, Linux,
+      details: Python (asyncio, FastAPI, uv), Bash, Linux,
         AWS (EKS, SQS, SNS, Lambda, ECR), GCP (Vertex AI, Pub/Sub, Cloud Run,
         Cloud Build, GCS, Artifact Registry), PostgreSQL, DynamoDB, Redis,
         RabbitMQ, NATS, MongoDB
