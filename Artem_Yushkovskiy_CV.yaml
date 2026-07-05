@@ -108,7 +108,7 @@ cv:
       - Led production computer vision projects for clients (object detection,
         classification, RabbitMQ-driven inference, MongoDB, Kubernetes)
     - company: Application Security Research
-      position: Security Researcher (part-time, during BSc)
+      position: Security Researcher
       start_date: 2014
       end_date: 2016
       highlights:
