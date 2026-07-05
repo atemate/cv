@@ -10,3 +10,6 @@ __pycache__/
 
 # OS
 .DS_Store
+
+# no project-wide configuration
+.claude/
