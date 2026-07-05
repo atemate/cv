@@ -12,16 +12,17 @@ cv:
     username: atemate
   sections:
     summary:
-    - '**AI Platform Engineer & Tech Lead**, 10+ years across ML platforms and high-scale
-      distributed AI systems; tech lead of a 10-person squad (no direct reports) owning
-      architecture, mentoring, and delivery.'
+    - '**AI Platform Engineer & Tech Lead**, 8+ years building ML platforms and high-scale
+      distributed AI systems (10+ in software engineering); tech lead of a 10-person squad
+      (no direct reports) owning architecture, mentoring, and delivery.'
     - 'Built AI infrastructure at global scale: **self-hosted GenAI image enhancement**
-      (100K+ images/night, batch → near-realtime streaming), **20+ fraud-detection model
-      ensembles** across 70+ countries (<10ms), and an **internal ML platform** on GCP
-      Vertex AI used by 5+ teams.'
+      (100K+ images/night, batch → near-realtime streaming), **per-country voucher-fraud
+      models** across 20+ countries (<10ms serving, 70% fraud reduction), and an
+      **internal ML platform** on GCP Vertex AI used by 5+ teams.'
     - 'Creator of **[asya.sh](https://asya.sh)**, an open-source Kubernetes-native actor
-      mesh for AI, presented at **KubeCon EU 2026**. Berlin-based — seeking hybrid or
-      fully remote full-time roles in Germany (permanent employment, not freelance).'
+      mesh for AI, presented at **KubeCon EU 2026**. Berlin-based, authorized to work in
+      Germany (no visa sponsorship needed) — seeking hybrid or fully remote full-time
+      roles (permanent employment, not freelance).'
     experience:
     - company: Delivery Hero
       position: Sr AI Engineer - Distributed AI Orchestration, GenAI (images)
@@ -74,14 +75,14 @@ cv:
       - Designed and built an internal ML Platform on GCP Vertex AI, providing shared
         data and ML pipeline infrastructure across teams (CLV, food ontology,
         dish normalization, email suspicion, fraud detection)
-      - 'Owned full lifecycle of 20+ parameterized ML models for voucher fraud detection
-        across 70+ countries (4 continents): built end-to-end CI/CD enabling data
-        scientists to iterate fast against rapidly shifting fraud patterns (nightly
-        batch pipelines on BigQuery/Airflow, per-country model training on Vertex AI,
-        automated evaluation with data drift tracking via Evidently, results reported
-        to GitHub Actions for promotion decisions), saving $100K+/month'
-      - 'Two-model serving pipeline: email suspicion (DynamoDB caching) → fraud
-        scoring consuming multiple signals → rule-based system; FastAPI + XGBoost,
+      - 'Owned the full lifecycle of 20+ per-country voucher-fraud models across 2 global
+        regions (EMEA, APAC): built end-to-end CI/CD enabling data scientists to iterate
+        fast against rapidly shifting fraud patterns (nightly batch pipelines on
+        BigQuery/Airflow, per-country training on Vertex AI, automated evaluation with
+        drift tracking via Evidently, results reported to GitHub Actions for promotion
+        decisions); cut voucher fraud 70% (~$100K+/month saved)'
+      - 'Two-model serving pipeline: email-suspicion score (DynamoDB caching) plus
+        near-realtime features → CatBoost fraud classifier → rule-based system; FastAPI,
         optimized to <10ms per request on every food order'
       - Engineered dataset versioning for strict model comparability without data
         leakage; re-implemented across two teams and proposed as a company-wide standard
@@ -150,7 +151,7 @@ cv:
     - label: AI Infrastructure & Inference
       details: self-hosted model serving, inference optimization, GPU orchestration
         (KEDA, scale-to-zero), batch & streaming inference, async actor-based pipelines,
-        AI guardrails, image generation (SDXL), LLM integration, PyTorch, vLLM
+        AI guardrails, image generation (SDXL), LLM serving (vLLM), PyTorch
     - label: Platform Engineering & Developer Experience
       details: Kubernetes (CRDs, operators, Helm, Kustomize), GitOps (ArgoCD, Flux),
         IaC (Terraform), CI/CD (GitHub Actions, Docker Buildx),
@@ -170,9 +171,8 @@ cv:
     - label: Spoken Languages
       details: 'English, Russian (fluent); French (intermediate); German (learning)'
     - label: Certifications
-      details: '[GCP Professional Architect](https://www.credly.com/badges/e6e0043b-1713-4a1a-92b2-ed7fe2a312bb/) (2025),
-        [GCP Professional ML Engineer](https://www.credly.com/badges/e8299f25-ee02-47cf-b70f-c392f2926ef8/) (2023, expired),
-        [KubeCon + CloudNativeCon Speaker](https://www.credly.com/badges/f142bfaa-2160-4e15-8dfa-170405b7719b/) (2026)'
+      details: '[Google Cloud Professional Cloud Architect](https://www.credly.com/badges/e6e0043b-1713-4a1a-92b2-ed7fe2a312bb/) (2025),
+        [Google Cloud Professional Machine Learning Engineer](https://www.credly.com/badges/e8299f25-ee02-47cf-b70f-c392f2926ef8/) (2023, expired)'
 
 design:
   theme: engineeringresumes
