@@ -15,8 +15,8 @@ cv:
     - 'AI Platform Engineer and Tech Lead with 10+ years spanning security research,
       ML platforms, and high-scale distributed AI systems. Led a squad of 10, driving
       technical direction for AI infrastructure at global scale: self-hosted image
-      generation (10k+ of images nightly in batch, as well as live near-realtime
-      streaming), 2x 20+ fraud detection models across 70+ countries (<10ms latency),
+      generation (100K+ of images nightly in batch, as well as live near-realtime
+      streaming), 20+ parametrized fraud detection model ensembles across 70+ countries (<10ms latency),
       internal ML platform on top of GCP Vertex AI used by 5+ teams. Designed and open-sourced
       [asya.sh](https://asya.sh), a Kubernetes-native actor mesh for AI workloads
       presented at KubeCon EU 2026.
@@ -37,7 +37,7 @@ cv:
         deployment via platform tooling)'
       - Designed and scaled a self-hosted AI image processing platform on AWS/Kubernetes;
         GPU-bound multi-model pipelines per image (production models, scoring, analysis,
-        guardrails), self-hosted under strict cost constraints; 100K+ images nightly
+        guardrails), self-hosted under strict cost constraints; 100K+ of images nightly
         in batch, migrated to near-realtime streaming (<5 min SLA, shrinking) with zero
         application code changes; early A/B tests show measurable lift in clicks and
         purchases at global scale
