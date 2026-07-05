@@ -12,16 +12,16 @@ cv:
     username: atemate
   sections:
     summary:
-    - 'AI Platform Engineer and Tech Lead with 10+ years spanning security research,
-      ML platforms, and high-scale distributed AI systems. Led a squad of 10, driving
-      technical direction for AI infrastructure at global scale: self-hosted image
-      generation (100K+ of images nightly in batch, as well as live near-realtime
-      streaming), 20+ parametrized fraud detection model ensembles across 70+ countries (<10ms latency),
-      internal ML platform on top of GCP Vertex AI used by 5+ teams. Designed and open-sourced
-      [asya.sh](https://asya.sh), a Kubernetes-native actor mesh for AI workloads
-      presented at KubeCon EU 2026.
-      Looking to build global AI platforms that let teams ship, test, and
-      scale AI and ML workloads fast.'
+    - '**AI Platform Engineer & Tech Lead**, 10+ years across ML platforms and high-scale
+      distributed AI systems; tech lead of a 10-person squad (no direct reports) owning
+      architecture, mentoring, and delivery.'
+    - 'Built AI infrastructure at global scale: **self-hosted GenAI image enhancement**
+      (100K+ images/night, batch → near-realtime streaming), **20+ fraud-detection model
+      ensembles** across 70+ countries (<10ms), and an **internal ML platform** on GCP
+      Vertex AI used by 5+ teams.'
+    - 'Creator of **[asya.sh](https://asya.sh)**, an open-source Kubernetes-native actor
+      mesh for AI, presented at **KubeCon EU 2026**. Berlin-based — seeking hybrid or
+      fully remote full-time roles in Germany (permanent employment, not freelance).'
     experience:
     - company: Delivery Hero
       position: Sr AI Engineer - Distributed AI Orchestration, GenAI (images)
@@ -35,35 +35,28 @@ cv:
         enabling divide-and-conquer at scale with clear ownership boundaries
         (engineers own infra/pre-processing, data scientists own model logic and
         deployment via platform tooling)'
-      - Designed and scaled a self-hosted AI image processing platform on AWS/Kubernetes;
-        GPU-bound multi-model pipelines per image (production models, scoring, analysis,
-        guardrails), self-hosted under strict cost constraints; 100K+ of images nightly
-        in batch, migrated to near-realtime streaming (<5 min SLA, shrinking) with zero
-        application code changes; early A/B tests show measurable lift in clicks and
-        purchases at global scale
-      - Designed CI/CD for monorepo with 15+ model packages building multi-GB GPU images;
-        reduced end-to-end deployment cycle from days to ~1 hour; build time
-        4h → 20 min (cache miss), 1h → 6 min (cache hit); for some workloads pod startup time reduced 20 min → 3 min;
-        image sizes 3-4x smaller [Docker Buildx, uv, optimized layer caching]
+      - Designed and scaled a self-hosted image-enhancement platform for dish & menu
+        imagery (upscaling, outpainting, background removal, color balance) on
+        AWS/Kubernetes; GPU-bound multi-model pipelines per image (production models,
+        scoring, analysis, guardrails) under strict cost constraints; 100K+ images
+        nightly in batch, migrated to near-realtime streaming (<5 min SLA, shrinking)
+        with zero application code changes; early A/B tests show measurable lift in
+        clicks and purchases at global scale
+      - Built a data-centric ML quality-control system to close the image-enhancement
+        feedback loop; designed a human labeling & exploration tool over a 223K-image
+        dataset (ordinal severity + multi-label defect taxonomy), aligned a team-reviewed
+        golden set and scaled it 1K → 20K via VLM labeling, then trained an ordinal
+        ConvNeXt classifier (0.87 severe-case recall on the human test set; VLM-val vs
+        human-test macro-F1 gap <0.005) with one-click weekly retraining — making
+        consistent, human-aligned data (not model architecture) the driver of quality
+        [PyTorch, MLflow]
+      - Designed CI/CD for a monorepo of 15+ model packages building multi-GB GPU images;
+        cut end-to-end deployment from days to ~1 hour and image sizes 3-4x smaller
+        (optimized layer caching cut build & pod-startup times ~5-6x) [Docker Buildx, uv]
       - 'Recognized the actor mesh pattern''s general value for AI and agentic workloads
         beyond image processing; drove the initiative to re-implement and open-source it
-        as [asya.sh](https://asya.sh); developed using high-velocity AI-assisted workflow
-        over ~3 months (core actors → Crossplane migration → agentic features → DevX);
-        now live and being adopted internally'
-      # Interview prep - asya complexity & AI-assisted development stats:
-      # Scope: K8s-native, highly modular, Crossplane-based (was custom operator, migrated)
-      #   CRDs, transport plugins (adding new transport e.g. Pub/Sub/Kafka = ~1 day, ~$100, ~1K LOC with tests)
-      #   Not a CLI tool - full cloud-native platform with operator, CRDs, KEDA integration
-      # Timeline: ~3.5 months (Oct-mid Nov 2025: core;
-      #   Feb-Mar 2026: Crossplane migration (-30K LOC), A2A, streaming, flow compilation, DevX)
-      # Sniffly stats (post-Dec 2025 only, pre-Oct data deleted):
-      #   3,251 commands, 140 sessions, 67K messages, 18.2M tokens, $6.3K API cost
-      #   33,228 tool calls, avg 9.34 steps/command, longest chain 356 steps
-      #   2.7% interruption rate (high trust, not vibe coding), 96.6% cache hit rate
-      #   Models: Opus 4.6 (~70%), Sonnet 4.6 (~28%)
-      # Talking point: for cloud-native complexity (CRDs, Crossplane, transport abstraction,
-      #   KEDA autoscaling), ~3.5 months is very tight - demonstrates high productivity
-      #   with AI-assisted development while maintaining code quality and architectural control
+        as [asya.sh](https://asya.sh) (Crossplane-based operator, CRDs, KEDA autoscaling,
+        pluggable transports); now live and adopted internally'
       - 'Authored company-wide RFC on GPU capacity and cost strategy (training + serving):
         18-36 month demand forecasting, usage patterns across teams, negotiation
         baseline for cloud provider agreements; defined SLA targets and cost governance
@@ -72,9 +65,6 @@ cv:
         continuously coaching data scientists on engineering best practices (testing,
         CI/CD, clean code) to raise tech culture across the team; active contributor
         to ML chapter and weekly operations reviews, driving cross-team knowledge sharing
-        # * System design / architecture thinking - helping them see beyond their ticket
-        # * Ownership and autonomy - growing them to own features end-to-end
-        # * Code review quality - not just "fix this" but teaching them to spot patterns
     - company: Delivery Hero
       position: ML Engineer, ML Platform → Fraud Detection
       location: Berlin, DE
@@ -94,8 +84,7 @@ cv:
         scoring consuming multiple signals → rule-based system; FastAPI + XGBoost,
         optimized to <10ms per request on every food order'
       - Engineered dataset versioning for strict model comparability without data
-        leakage; re-implemented across two teams, then proposed as a company-wide
-        standard (RFC adoption in progress)
+        leakage; re-implemented across two teams and proposed as a company-wide standard
       - On-call SRE for fraud models and global Customer Data Platform (low-latency
         feature aggregation, Flink, DynamoDB); monitoring and observability (DataDog,
         OpsGenie)
@@ -114,43 +103,13 @@ cv:
         Pachyderm); ran internal Kubernetes seminars for the team
       - Led production computer vision projects for clients (object detection,
         classification, RabbitMQ-driven inference, MongoDB, Kubernetes)
-      # Expanded details (from old CV ~/Downloads/Artem - Resume (outdated).docx):
-      # Title progression: Software Engineer (Python) Oct 2018 – Jul 2020, then MLOps Engineer Jul 2020 – Jul 2021
-      # Platform "Neuromation" later rebranded to "Neu.ro"
-      # SW Eng responsibilities: development of ML platform REST API microservices managing
-      #   distributed K8s cluster (multi-cloud), backend: user mgmt, distributed storage,
-      #   resource orchestration via K8s; user-facing: CLI, SDK, user workflows,
-      #   integration with ML frameworks and tools; design, implementation, maintenance
-      # MLOps Eng responsibilities: supporting clients of MLOps-as-a-service platform Neu.ro,
-      #   developing full-cycle ML/Ops solutions with monitoring, versioning, complex
-      #   inference setup, and closed ML feedback loop; product research to improve
-      #   Neu.ro platform and integrate other tools
-      # Client project (retail domain): full-cycle ML/Ops solution - Computer Vision
-      #   (object detection and classification), RabbitMQ-driven inference, data persistency
-      #   to MongoDB, data analytics, deployed on Kubernetes
-      # Community: leading ask-me-anything initiative in MLOps Community (also in Speaking section)
-      # Internal: ran Kubernetes seminars for colleagues
-      # Tools: DVC, Seldon, Feast, Pachyderm, Prometheus, Grafana, RabbitMQ, MongoDB
-    - company: ptsecurity, Aalto University
-      position: Security Researcher → Software Engineer
-      # location: St Petersburg, RU
-      start_date: 2015
-      end_date: 2018
+    - company: Application Security Research
+      position: Security Researcher (part-time, during BSc)
+      start_date: 2014
+      end_date: 2016
       highlights:
-      - Automated QA of web security scanners and application firewalls (DAST, SAST, WAF),
+      - Automated QA of web application security scanners and firewalls (DAST/SAST/WAF);
         vulnerability search, static code analysis, abstract interpretation, SMT solvers
-      - Portability analysis of C-like programs (MSc thesis project)
-      # Expanded details:
-      # ptsecurity = Positive Technologies (company under US/EU sanctions, using short name)
-      # Role at ptsecurity: QA automation engineer for web security products
-      #   - automated testing of web application security scanners (DAST) and WAFs
-      #   - vulnerability research, static code analysis tools
-      #   - abstract interpretation, SMT solvers
-      # Role at Aalto University: MSc thesis research
-      #   - thesis: "Automated Analysis of Weak Memory Models"
-      #   - portability analysis of distributed systems
-      # Hackathon: Vector Search Engineering Lab (2022) with Redis vector search
-      #   - https://paulomaia20.medium.com/vector-search-engineering-lab-untitled1-cfa86576f1dc
     projects:
     - name: Asya🎭 - Open-source Kubernetes-native Actor Mesh for AI Orchestration
       date: 2025-11
@@ -167,38 +126,9 @@ cv:
         and infrastructure config (platform engineers), solving the ownership handover
         problem in AI teams ("two files, two owners")'
       - '[asya.sh](https://asya.sh) | [GitHub](https://github.com/deliveryhero/asya)'
-      # Comparison docs at asya.sh/docs/comparisons/ cover 14 systems across 7 categories:
-      #   Workflow orchestrators (Temporal, Argo, Airflow, Prefect, Dagster)
-      #   Actor frameworks (Erlang/OTP, Akka/Pekko, Orleans, Dapr)
-      #   Agentic frameworks (LangGraph, CrewAI, Google ADK, AutoGen, KAgent)
-      #   ML pipelines (KFP, Flyte, Metaflow, ZenML)
-      #   Stream processing (Flink, Kafka Streams, Spark Streaming)
-      #   AI/ML serving (KServe, KAITO, KubeAI, vLLM, LLM-d)
-      #   K8s job schedulers (Kueue, Run.ai, Volcano)
-      # In-depth 1:1 comparisons: Temporal, Dapr, LangGraph, ADK, KAgent, Ray Serve, KFP
-      # Great interview talking point for "deep knowledge of agent framework internals"
-    # WIP - uncomment when ready:
-    # - name: git-aint - AI-native Issue Tracker
-    #   date: '2026-03'
-    #   highlights:
-    #   - Issue tracking where tasks are markdown files stored in git (separate worktree)
-    #     - no external database, no SaaS dependency
-    #   - 'Designed for parallel multi-agent development workflows while keeping human
-    #     in the loop: AI agents read and write tasks natively alongside humans, all
-    #     stored in plain text in git'
-    #   - Enables RFC, ADR, tech design, and task tracking as editable .md files - complexity
-    #     owned by the team, not hidden in a third-party tool
-    #   - Together with git worktrees, allows parallelizing implementation across tens
-    #     of agents without losing control on the code
-    #   - '[GitHub](https://github.com/atemate/git-aint)'
     Public Speaking:
     - bullet: '[KubeCon EU 2026](https://kccnceu2026.sched.com/event/2CW2j/) Amsterdam (13k+), [AI Infra Summit](https://www.we-conect.com/events/ai-infrastructure-summit-europe-2026/speakers/635351d9-b0cb-4288-a40a-3b0f2ff7c744) Munich (500+), [AI in Production](https://luma.com/jpj4z4lo?tk=uzrOX2) Berlin (150+), [Agents in Production](https://home.mlops.community/public/videos/fast-and-asynchronous-drift-your-ai-not-your-gpu-bill-artem-yushkovskiy-2025-12-09) virtual'
     - bullet: MLOps Community Berlin meetup organizer; led Ask-Me-Anything initiative in MLOps Community Slack (2021-2023)
-    # Full details:
-    # - KubeCon + CloudNativeCon EU 2026: https://kccnceu2026.sched.com/event/2CW2j/ (~13k attendees)
-    # - AI Infrastructure Summit Europe 2026, Munich - we.CONECT: https://www.we-conect.com/events/ai-infrastructure-summit-europe-2026/speakers/635351d9-b0cb-4288-a40a-3b0f2ff7c744 (500+ attendees)
-    # - AI in Production Meetup, Berlin, GetYourGuide, Nov 2025: https://luma.com/jpj4z4lo?tk=uzrOX2 (150+ participants)
-    # - Agents in Production, MLOps Community x Prosus, Dec 2025: https://home.mlops.community/public/videos/fast-and-asynchronous-drift-your-ai-not-your-gpu-bill-artem-yushkovskiy-2025-12-09 (~4k participants)
     education:
     - institution: Aalto University (Helsinki) & ITMO University (St Petersburg)
       area: Computer Science
@@ -219,32 +149,24 @@ cv:
     skills:
     - label: AI Infrastructure & Inference
       details: self-hosted model serving, inference optimization, GPU orchestration
-        (KEDA, scale-to-zero), batch & streaming inference, model deployment,
-        async actor-based pipelines, AI guardrails, image generation (SDXL),
-        LLM integration, vLLM, Ray Serve, Triton, PyTorch, HuggingFace, ONNX
+        (KEDA, scale-to-zero), batch & streaming inference, async actor-based pipelines,
+        AI guardrails, image generation (SDXL), LLM integration, PyTorch, vLLM
     - label: Platform Engineering & Developer Experience
       details: Kubernetes (CRDs, operators, Helm, Kustomize), GitOps (ArgoCD, Flux),
-        IaC (Terraform), CI/CD (GitHub Actions, Drone CI, Docker Buildx, Kaniko),
+        IaC (Terraform), CI/CD (GitHub Actions, Docker Buildx),
         internal developer platform, multi-tenancy, RBAC, cost optimization,
-        observability (OpenTelemetry, Prometheus, Loki, Grafana, DataDog),
-        alerting (OpsGenie), secret management (Vault)
+        observability (Prometheus, Grafana, DataDog), secret management (Vault)
     - label: MLOps & Data
-      details: ML lifecycle (Vertex AI, MLflow, W&B), pipeline orchestration
-        (Airflow, KFP, Flyte, Metaflow), feature stores, dataset versioning (DVC),
-        A/B testing, experimentation, data quality (Great Expectations, Evidently),
-        vector search (Redis, Milvus), stream processing (Flink),
+      details: ML lifecycle (Vertex AI, MLflow), pipeline orchestration
+        (Airflow, KFP), feature stores, dataset versioning (DVC),
+        A/B testing, experimentation, data quality (Evidently),
+        vector search (Redis), stream processing (Flink),
         low-latency model serving (<10ms)
     - label: Programming & Cloud Infrastructure
       details: Python (asyncio, FastAPI, uv), Go, Bash, Linux,
         AWS (EKS, SQS, SNS, Lambda, ECR), GCP (Vertex AI, Pub/Sub, Cloud Run,
         Cloud Build, GCS, Artifact Registry), PostgreSQL, DynamoDB, Redis,
         RabbitMQ, NATS, MongoDB
-    - label: AI-first Workflow & Agent Architecture
-      details: built asya.sh (~3 months) using AI-first workflow (Claude Code CLI,
-        parallel sandboxed agents, git worktree isolation),
-        deep knowledge of agent framework internals (ADK, A2A, MCP),
-        eval pipelines, human-in-the-loop workflows, Langfuse,
-        large-scale codebase automation
     - label: Spoken Languages
       details: 'English, Russian (fluent); French (intermediate); German (learning)'
     - label: Certifications
